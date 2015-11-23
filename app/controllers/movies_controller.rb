@@ -12,12 +12,12 @@ helper_method :sort_column, :sort_direction
   end
 
   def index
-@movies = Movie.order(sort_column + " " + sort_direction)
-    # @movies = Movie.all
+    @movies = Movie.order(sort_column + " " + sort_direction)
   end
 
   def new
     # default: render 'new' template
+    # :new
   end
 
   def create
@@ -47,10 +47,11 @@ helper_method :sort_column, :sort_direction
   private 
     def sort_column
       params[:sort] || "title"
+      
     end
     
     def sort_direction
-      params[:direction] || "asc"
+      params[:direction] || "desc"
     end
 
 end
