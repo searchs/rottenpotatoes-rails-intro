@@ -13,6 +13,7 @@ helper_method :sort_column, :sort_direction
 
   def index
     @movies = Movie.order(sort_column + " " + sort_direction)
+    @all_ratings = Movie.all_ratings
   end
 
   def new
@@ -44,11 +45,6 @@ helper_method :sort_column, :sort_direction
     redirect_to movies_path
   end
   
-  
-  # def all_ratings
-  #   @movies
-  #   @movie = Movie.find(distinct ratings)
-  # end
   
   private 
     def sort_column
