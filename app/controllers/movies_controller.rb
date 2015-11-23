@@ -45,10 +45,10 @@ helper_method :sort_column, :sort_direction
   end
   
   
-  def all_ratings
-    @movies
-    @movie = Movie.find(distinct ratings)
-  end
+  # def all_ratings
+  #   @movies
+  #   @movie = Movie.find(distinct ratings)
+  # end
   
   private 
     def sort_column
